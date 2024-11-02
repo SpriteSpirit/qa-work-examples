@@ -1,0 +1,550 @@
+{
+    "cases": [],
+    "suites": [
+        {
+            "id": 1,
+            "title": "Количество блюд",
+            "description": null,
+            "preconditions": null,
+            "suites": [],
+            "cases": [
+                {
+                    "id": 1,
+                    "title": "Увеличить кол-во блюд нажав на +",
+                    "description": null,
+                    "preconditions": "Зайти на [сайт](https://forms-tasks-2.herokuapp.com/food-delivery)",
+                    "postconditions": null,
+                    "priority": "high",
+                    "severity": "blocker",
+                    "type": "functional",
+                    "behavior": "positive",
+                    "automation": "is-not-automated",
+                    "status": "actual",
+                    "is_flaky": "no",
+                    "layer": "unknown",
+                    "milestone": null,
+                    "custom_fields": [],
+                    "steps_type": "classic",
+                    "steps": [
+                        {
+                            "position": 1,
+                            "action": "Выбрать блюдо и увеличить кол-во на 1, нажав на +",
+                            "expected_result": "Количество блюд увеличится на 1",
+                            "data": "",
+                            "steps": []
+                        },
+                        {
+                            "position": 2,
+                            "action": "Нажать на + несколько раз",
+                            "expected_result": "Количество блюд увеличивается ровно на столько, сколько раз нажали на +",
+                            "data": "",
+                            "steps": []
+                        }
+                    ],
+                    "tags": [],
+                    "params": [],
+                    "is_muted": "no"
+                },
+                {
+                    "id": 2,
+                    "title": "Уменьшить кол-во блюд нажав на -",
+                    "description": null,
+                    "preconditions": "Зайти на [сайт ](https://forms-tasks-2.herokuapp.com/food-delivery)",
+                    "postconditions": null,
+                    "priority": "high",
+                    "severity": "blocker",
+                    "type": "functional",
+                    "behavior": "positive",
+                    "automation": "is-not-automated",
+                    "status": "actual",
+                    "is_flaky": "no",
+                    "layer": "unknown",
+                    "milestone": null,
+                    "custom_fields": [],
+                    "steps_type": "classic",
+                    "steps": [
+                        {
+                            "position": 1,
+                            "action": "Нажать на иконку -",
+                            "expected_result": "Количество блюд уменьшится на 1 единицу",
+                            "data": "",
+                            "steps": []
+                        },
+                        {
+                            "position": 2,
+                            "action": "Нажать на кнопку несколько раз (пока кол-во блюд не будет равно 0)",
+                            "expected_result": "Уменьшится кол-во блюд равное количеству нажатий на -",
+                            "data": "",
+                            "steps": []
+                        }
+                    ],
+                    "tags": [],
+                    "params": [],
+                    "is_muted": "no"
+                },
+                {
+                    "id": 3,
+                    "title": "Нажатие на кнопку - при кол-ве товар равном 0",
+                    "description": null,
+                    "preconditions": "Открыть сайт",
+                    "postconditions": null,
+                    "priority": "medium",
+                    "severity": "major",
+                    "type": "functional",
+                    "behavior": "negative",
+                    "automation": "is-not-automated",
+                    "status": "actual",
+                    "is_flaky": "no",
+                    "layer": "unknown",
+                    "milestone": null,
+                    "custom_fields": [],
+                    "steps_type": "classic",
+                    "steps": [
+                        {
+                            "position": 1,
+                            "action": "Выбрать блюдо с кол-вом 0",
+                            "expected_result": "",
+                            "data": "",
+                            "steps": []
+                        },
+                        {
+                            "position": 2,
+                            "action": "Нажать на -",
+                            "expected_result": "Значение кол-ва блюд не должно быть отрицательным",
+                            "data": "",
+                            "steps": []
+                        }
+                    ],
+                    "tags": [],
+                    "params": [],
+                    "is_muted": "no"
+                },
+                {
+                    "id": 4,
+                    "title": "Ввод численного кол-ва блюд",
+                    "description": null,
+                    "preconditions": "Зайти на сайт",
+                    "postconditions": null,
+                    "priority": "high",
+                    "severity": "blocker",
+                    "type": "functional",
+                    "behavior": "positive",
+                    "automation": "is-not-automated",
+                    "status": "actual",
+                    "is_flaky": "no",
+                    "layer": "unknown",
+                    "milestone": null,
+                    "custom_fields": [],
+                    "steps_type": "classic",
+                    "steps": [
+                        {
+                            "position": 1,
+                            "action": "Выбрать любое блюдо",
+                            "expected_result": "Введенное значение отобразилось в системе",
+                            "data": "Ввести любое целое положительное число",
+                            "steps": []
+                        }
+                    ],
+                    "tags": [],
+                    "params": [],
+                    "is_muted": "no"
+                },
+                {
+                    "id": 5,
+                    "title": "Ввод нечисловых значений  в поле \"кол-во блюд\"",
+                    "description": null,
+                    "preconditions": "Зайти на сайт",
+                    "postconditions": null,
+                    "priority": "low",
+                    "severity": "normal",
+                    "type": "functional",
+                    "behavior": "negative",
+                    "automation": "is-not-automated",
+                    "status": "actual",
+                    "is_flaky": "no",
+                    "layer": "unknown",
+                    "milestone": null,
+                    "custom_fields": [],
+                    "steps_type": "classic",
+                    "steps": [
+                        {
+                            "position": 1,
+                            "action": "Ввести невалидные значения",
+                            "expected_result": "Отображается ошибка",
+                            "data": "[https://checkvist.com/checklists/888809](https://checkvist.com/checklists/888809)",
+                            "steps": []
+                        }
+                    ],
+                    "tags": [],
+                    "params": [],
+                    "is_muted": "no"
+                },
+                {
+                    "id": 6,
+                    "title": "Кнопка Next активируется только после выбора блюда",
+                    "description": null,
+                    "preconditions": "Зайти на сайт",
+                    "postconditions": "Кнопка Next становится активной",
+                    "priority": "high",
+                    "severity": "blocker",
+                    "type": "functional",
+                    "behavior": "positive",
+                    "automation": "is-not-automated",
+                    "status": "actual",
+                    "is_flaky": "no",
+                    "layer": "unknown",
+                    "milestone": null,
+                    "custom_fields": [],
+                    "steps_type": "classic",
+                    "steps": [
+                        {
+                            "position": 1,
+                            "action": "Выбираем любое блюдо",
+                            "expected_result": "",
+                            "data": "",
+                            "steps": []
+                        },
+                        {
+                            "position": 2,
+                            "action": "Устанавливаем количество на 1, нажав на +",
+                            "expected_result": "Кол-во блюд увеличилось на 1",
+                            "data": "",
+                            "steps": []
+                        },
+                        {
+                            "position": 3,
+                            "action": "Проверяем активность кнопки Next",
+                            "expected_result": "Кнопка Next активируется только после выбора блюда",
+                            "data": "",
+                            "steps": []
+                        }
+                    ],
+                    "tags": [],
+                    "params": [],
+                    "is_muted": "no"
+                },
+                {
+                    "id": 7,
+                    "title": "Переход к следующей форме после выбора блюда при нажатии на кнопку Next",
+                    "description": null,
+                    "preconditions": "Зайти на сайт",
+                    "postconditions": null,
+                    "priority": "high",
+                    "severity": "blocker",
+                    "type": "functional",
+                    "behavior": "positive",
+                    "automation": "is-not-automated",
+                    "status": "actual",
+                    "is_flaky": "no",
+                    "layer": "unknown",
+                    "milestone": null,
+                    "custom_fields": [],
+                    "steps_type": "classic",
+                    "steps": [
+                        {
+                            "position": 1,
+                            "action": "Выбираем любое блюдо",
+                            "expected_result": "",
+                            "data": "",
+                            "steps": []
+                        },
+                        {
+                            "position": 2,
+                            "action": "Нажимаем на + и увеличиваем кол-во блюд на 1",
+                            "expected_result": "Кол-во блюд увеличилось на 1",
+                            "data": "",
+                            "steps": []
+                        },
+                        {
+                            "position": 3,
+                            "action": "Нажимаем на кнопку Next",
+                            "expected_result": "Переходим к следующей форме",
+                            "data": "",
+                            "steps": []
+                        }
+                    ],
+                    "tags": [],
+                    "params": [],
+                    "is_muted": "no"
+                },
+                {
+                    "id": 8,
+                    "title": "Активность кнопки Next и возможность перехода на след. форму при 0 кол-ве блюд",
+                    "description": null,
+                    "preconditions": "Зайти на сайт",
+                    "postconditions": null,
+                    "priority": "high",
+                    "severity": "blocker",
+                    "type": "functional",
+                    "behavior": "negative",
+                    "automation": "is-not-automated",
+                    "status": "actual",
+                    "is_flaky": "no",
+                    "layer": "unknown",
+                    "milestone": null,
+                    "custom_fields": [],
+                    "steps_type": "classic",
+                    "steps": [
+                        {
+                            "position": 1,
+                            "action": "Убедиться, что ни одно блюдо не выбрано",
+                            "expected_result": "Ни одно блюдо не выбрано в количестве > 0",
+                            "data": "",
+                            "steps": []
+                        },
+                        {
+                            "position": 2,
+                            "action": "Нажать на кнопку Next",
+                            "expected_result": "Кнопка Next неактивна",
+                            "data": "",
+                            "steps": []
+                        }
+                    ],
+                    "tags": [],
+                    "params": [],
+                    "is_muted": "no"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Форма с контактной информацией",
+            "description": null,
+            "preconditions": null,
+            "suites": [],
+            "cases": [
+                {
+                    "id": 9,
+                    "title": "Отправку формы с пустым полем \"ФИО\"",
+                    "description": null,
+                    "preconditions": "1. Зайти на [сайт](https://forms-tasks-2.herokuapp.com/food-delivery)\n2. Выбрать любое блюдо в количестве больше 0\n3. Нажать на кнопку Next\n4. Перейти на вторую страницу формы",
+                    "postconditions": null,
+                    "priority": "high",
+                    "severity": "blocker",
+                    "type": "functional",
+                    "behavior": "negative",
+                    "automation": "is-not-automated",
+                    "status": "actual",
+                    "is_flaky": "no",
+                    "layer": "unknown",
+                    "milestone": null,
+                    "custom_fields": [],
+                    "steps_type": "classic",
+                    "steps": [
+                        {
+                            "position": 1,
+                            "action": "Оставить поле \"ФИО\" пустым и перейти к след. полю",
+                            "expected_result": "Отображается ошибка с ~~указанием~~ на заполнение поля \"ФИО\"",
+                            "data": "",
+                            "steps": []
+                        },
+                        {
+                            "position": 2,
+                            "action": "Заполнить поле \"email\" валидными данными",
+                            "expected_result": "Поле \"email\" заполнено",
+                            "data": "",
+                            "steps": []
+                        },
+                        {
+                            "position": 3,
+                            "action": "Заполнить поле \"Телефон\" по маске валидными данными",
+                            "expected_result": "Поле \"телефон\" заполнено",
+                            "data": "",
+                            "steps": []
+                        },
+                        {
+                            "position": 4,
+                            "action": "Указать валидный адрес доставки",
+                            "expected_result": "Поле \"Адрес заполнено\"",
+                            "data": "",
+                            "steps": []
+                        },
+                        {
+                            "position": 5,
+                            "action": "Указать способ оплаты",
+                            "expected_result": "Способ оплаты указан",
+                            "data": "",
+                            "steps": []
+                        },
+                        {
+                            "position": 6,
+                            "action": "Нажать на кнопку NEXT",
+                            "expected_result": "Отображается ошибка с указанием на заполнение поля \"ФИО\"",
+                            "data": "",
+                            "steps": []
+                        }
+                    ],
+                    "tags": [],
+                    "params": [],
+                    "is_muted": "no"
+                },
+                {
+                    "id": 10,
+                    "title": "Нажатие на радиокнопку в поле \"способ оплаты\"",
+                    "description": null,
+                    "preconditions": "1. Зайти на [сайт](https://forms-tasks-2.herokuapp.com/food-delivery)\n2. Выбрать любое блюдо в кол-ве больше 0\n3. Нажать на кнопку Next\n4. Перейти на вторую страницу формы\n5. Заполнить поле \"ФИО\"\n6. Заполнить поле \"Email\"\n7. Заполнить поле \"Телефон\"\n8. Заполнить поле \"Адрес доставки\"",
+                    "postconditions": null,
+                    "priority": "high",
+                    "severity": "blocker",
+                    "type": "functional",
+                    "behavior": "positive",
+                    "automation": "is-not-automated",
+                    "status": "actual",
+                    "is_flaky": "no",
+                    "layer": "unknown",
+                    "milestone": null,
+                    "custom_fields": [],
+                    "steps_type": "classic",
+                    "steps": [
+                        {
+                            "position": 1,
+                            "action": "Перейти к способу оплаты",
+                            "expected_result": "Выбор способа представлен в виде радиокнопок",
+                            "data": "",
+                            "steps": []
+                        },
+                        {
+                            "position": 2,
+                            "action": "Выбрать способ оплаты, нажав на радиокнопку",
+                            "expected_result": "Выбранный способ оплаты отметился точкой",
+                            "data": "",
+                            "steps": []
+                        }
+                    ],
+                    "tags": [],
+                    "params": [],
+                    "is_muted": "no"
+                },
+                {
+                    "id": 11,
+                    "title": "Ввод номера телефона по маске +7(999) 999-99-99",
+                    "description": null,
+                    "preconditions": "1. Зайти на [сайт](https://forms-tasks-2.herokuapp.com/food-delivery)\n2. Выбрать любое блюдо в количестве больше 0\n3. Нажать на кнопку Next\n4. перейти на вторую страницу формы\n5. Заполнить поле \"ФИО\"\n6. Заполнить поле \"Email\"",
+                    "postconditions": null,
+                    "priority": "high",
+                    "severity": "blocker",
+                    "type": "functional",
+                    "behavior": "positive",
+                    "automation": "is-not-automated",
+                    "status": "actual",
+                    "is_flaky": "no",
+                    "layer": "unknown",
+                    "milestone": null,
+                    "custom_fields": [],
+                    "steps_type": "classic",
+                    "steps": [
+                        {
+                            "position": 1,
+                            "action": "Заполнить поле \"Телефон\" по маске",
+                            "expected_result": "Вводимый номер телефона заполняется по заданной маске",
+                            "data": "",
+                            "steps": []
+                        }
+                    ],
+                    "tags": [],
+                    "params": [],
+                    "is_muted": "no"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Форма оплаты",
+            "description": null,
+            "preconditions": null,
+            "suites": [],
+            "cases": [
+                {
+                    "id": 12,
+                    "title": "Номер карты состоит из 16 цифр",
+                    "description": null,
+                    "preconditions": "1. Зайти на [сайт](https://forms-tasks-2.herokuapp.com/food-delivery)\n2. Выбрать любое блюдо в количестве больше 0\n3. Нажать на кнопку Next\n4. Перейти на вторую страницу формы\n5. Заполнить поле \"ФИО\"\n6. Заполнить поле \"Email\"\n7. Заполнить поле \"Телефон\"\n8. Заполнить поле \"Адрес доставки\"\n9. Перейти к способу оплаты\n10. Выбрать способ оплаты, нажав на радиокнопку\n11. Нажать на кнопку Next\n12. Перейти на третью страницу формы",
+                    "postconditions": null,
+                    "priority": "high",
+                    "severity": "critical",
+                    "type": "functional",
+                    "behavior": "positive",
+                    "automation": "is-not-automated",
+                    "status": "actual",
+                    "is_flaky": "no",
+                    "layer": "unknown",
+                    "milestone": null,
+                    "custom_fields": [],
+                    "steps_type": "classic",
+                    "steps": [
+                        {
+                            "position": 1,
+                            "action": "Ввести данные в поле \"Номер карты\"",
+                            "expected_result": "Система приняла введенный номер карты",
+                            "data": "Ввести целые положительные значения в количестве 16 цифр",
+                            "steps": []
+                        }
+                    ],
+                    "tags": [],
+                    "params": [],
+                    "is_muted": "no"
+                },
+                {
+                    "id": 13,
+                    "title": "Код CVC состоит из 3х символов",
+                    "description": null,
+                    "preconditions": "1. Зайти на [сайт](https://forms-tasks-2.herokuapp.com/food-delivery)\n2. Выбрать любое блюдо в количестве больше 0\n3. Нажать на кнопку Next\n4. Перейти на вторую страницу формы\n5. Заполнить поле \"ФИО\"\n6. Заполнить поле \"Email\"\n7. Заполнить поле \"Телефон\"\n8. Заполнить поле \"Адрес доставки\"\n9. Перейти к способу оплаты\n10. Выбрать способ оплаты, нажав на радиокнопку\n11. Нажать на кнопку Next\n12. Перейти на третью страницу формы\n13. Ввести данные в поле \"Номер карты\"\n14. Заполнить поле \"Имя держателя карты\"\n15. Указать срок действия карты в поле \"Срок до\"",
+                    "postconditions": null,
+                    "priority": "high",
+                    "severity": "blocker",
+                    "type": "functional",
+                    "behavior": "positive",
+                    "automation": "is-not-automated",
+                    "status": "actual",
+                    "is_flaky": "no",
+                    "layer": "unknown",
+                    "milestone": null,
+                    "custom_fields": [],
+                    "steps_type": "classic",
+                    "steps": [
+                        {
+                            "position": 1,
+                            "action": "Указать cvc код в поле \"CVC\"",
+                            "expected_result": "Поле \"CVC\" заполнено и принято системой",
+                            "data": "Вводится целое положительное трехзначное число",
+                            "steps": []
+                        }
+                    ],
+                    "tags": [],
+                    "params": [],
+                    "is_muted": "no"
+                },
+                {
+                    "id": 15,
+                    "title": "Ввод имени не латиницей",
+                    "description": null,
+                    "preconditions": "1. Зайти на [сайт](https://forms-tasks-2.herokuapp.com/food-delivery)\n2. Выбрать любое блюдо в количестве больше 0\n3. Нажать на кнопку Next\n4. Перейти на вторую страницу формы\n5. Заполнить поле \"ФИО\"\n6. Заполнить поле \"Email\"\n7. Заполнить поле \"Телефон\"\n8. Заполнить поле \"Адрес доставки\"\n9. Перейти к способу оплаты\n10. Выбрать способ оплаты, нажав на радиокнопку\n11. Нажать на кнопку Next\n12. Перейти на третью страницу формы\n13. Ввести данные в поле \"Номер карты\"",
+                    "postconditions": null,
+                    "priority": "high",
+                    "severity": "blocker",
+                    "type": "functional",
+                    "behavior": "negative",
+                    "automation": "is-not-automated",
+                    "status": "actual",
+                    "is_flaky": "no",
+                    "layer": "unknown",
+                    "milestone": null,
+                    "custom_fields": [],
+                    "steps_type": "classic",
+                    "steps": [
+                        {
+                            "position": 1,
+                            "action": "Ввести в поле \"Имя держателя карты\" невалидные данные",
+                            "expected_result": "Система отреагирует ошибкой на невалидные данные",
+                            "data": "[https://checkvist.com/p/6WeJXqibS5lYdPjB4PdYjh](https://checkvist.com/p/6WeJXqibS5lYdPjB4PdYjh)",
+                            "steps": []
+                        }
+                    ],
+                    "tags": [],
+                    "params": [],
+                    "is_muted": "no"
+                }
+            ]
+        }
+    ]
+}
