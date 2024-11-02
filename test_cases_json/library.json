@@ -1,0 +1,1477 @@
+{
+    "cases": [
+        {
+            "id": 22,
+            "title": "На каждой странице есть кликабельный заголовок «Библиотека», который возвращает на главную страницу",
+            "description": null,
+            "preconditions": null,
+            "postconditions": null,
+            "priority": "undefined",
+            "severity": "normal",
+            "type": "other",
+            "behavior": "undefined",
+            "automation": "is-not-automated",
+            "status": "actual",
+            "is_flaky": "no",
+            "layer": "unknown",
+            "milestone": null,
+            "custom_fields": [],
+            "steps_type": "classic",
+            "steps": [],
+            "tags": [],
+            "params": [],
+            "is_muted": "no"
+        },
+        {
+            "id": 23,
+            "title": "При вводе текста в поиск и нажатии на кнопку «Найти» система выдает найденные результаты",
+            "description": null,
+            "preconditions": null,
+            "postconditions": null,
+            "priority": "undefined",
+            "severity": "normal",
+            "type": "other",
+            "behavior": "undefined",
+            "automation": "is-not-automated",
+            "status": "actual",
+            "is_flaky": "no",
+            "layer": "unknown",
+            "milestone": null,
+            "custom_fields": [],
+            "steps_type": "classic",
+            "steps": [],
+            "tags": [],
+            "params": [],
+            "is_muted": "no"
+        }
+    ],
+    "suites": [
+        {
+            "id": 2,
+            "title": "Портал пользователя",
+            "description": null,
+            "preconditions": null,
+            "suites": [
+                {
+                    "id": 4,
+                    "title": "Просмотр списка книг",
+                    "description": null,
+                    "preconditions": null,
+                    "suites": [],
+                    "cases": [
+                        {
+                            "id": 1,
+                            "title": "Осуществляется переход на страницу с информацией о книге при клике на название книги.",
+                            "description": null,
+                            "preconditions": "Зайти на [портал ](https://books-library.herokuapp.com/)пользователя",
+                            "postconditions": null,
+                            "priority": "high",
+                            "severity": "blocker",
+                            "type": "functional",
+                            "behavior": "positive",
+                            "automation": "is-not-automated",
+                            "status": "actual",
+                            "is_flaky": "no",
+                            "layer": "unknown",
+                            "milestone": null,
+                            "custom_fields": [],
+                            "steps_type": "classic",
+                            "steps": [
+                                {
+                                    "position": 1,
+                                    "action": "Выбрать любую книгу из списка книг на главной странице",
+                                    "expected_result": "На главной странице есть как минимум одна книга с названием",
+                                    "data": "",
+                                    "steps": []
+                                },
+                                {
+                                    "position": 2,
+                                    "action": "Нажать на название книги",
+                                    "expected_result": "Название кликабельно. При нажатии на название книги происходит загрузка следующей страницы с описанием книги",
+                                    "data": "",
+                                    "steps": []
+                                },
+                                {
+                                    "position": 3,
+                                    "action": "Убедиться, что перешли на страницу с описанием книги",
+                                    "expected_result": "Страница с описание выбранной книги загрузилась и доступна для взаимодействия с пользователем",
+                                    "data": "",
+                                    "steps": []
+                                }
+                            ],
+                            "tags": [],
+                            "params": [],
+                            "is_muted": "no"
+                        },
+                        {
+                            "id": 3,
+                            "title": "Книги на главной странице отображаются в алфавитном порядке",
+                            "description": null,
+                            "preconditions": "Зайти на [портал ](https://books-library.herokuapp.com/)пользователя",
+                            "postconditions": null,
+                            "priority": "high",
+                            "severity": "critical",
+                            "type": "usability",
+                            "behavior": "positive",
+                            "automation": "is-not-automated",
+                            "status": "actual",
+                            "is_flaky": "no",
+                            "layer": "unknown",
+                            "milestone": null,
+                            "custom_fields": [],
+                            "steps_type": "classic",
+                            "steps": [
+                                {
+                                    "position": 1,
+                                    "action": "Проверить, что книги отображаются на главной странице",
+                                    "expected_result": "На главной странице есть более двух книг",
+                                    "data": "",
+                                    "steps": []
+                                },
+                                {
+                                    "position": 2,
+                                    "action": "Убедиться, что книги отображаются в алфавитном порядке",
+                                    "expected_result": "Книги отображаются в алфавитном порядке",
+                                    "data": "",
+                                    "steps": []
+                                }
+                            ],
+                            "tags": [],
+                            "params": [],
+                            "is_muted": "no"
+                        },
+                        {
+                            "id": 20,
+                            "title": "Переход в конкретную книгу происходит при нажатии на фото книги",
+                            "description": null,
+                            "preconditions": "Зайти на [портал ](https://books-library.herokuapp.com/)пользователя",
+                            "postconditions": null,
+                            "priority": "low",
+                            "severity": "minor",
+                            "type": "usability",
+                            "behavior": "positive",
+                            "automation": "is-not-automated",
+                            "status": "actual",
+                            "is_flaky": "no",
+                            "layer": "unknown",
+                            "milestone": null,
+                            "custom_fields": [],
+                            "steps_type": "classic",
+                            "steps": [
+                                {
+                                    "position": 1,
+                                    "action": "Выбрать любую книгу из списка книг на главной странице",
+                                    "expected_result": "На главной странице есть как минимум одна книга с названием",
+                                    "data": "",
+                                    "steps": []
+                                },
+                                {
+                                    "position": 2,
+                                    "action": "Нажать на фото книги",
+                                    "expected_result": "Фото кликабельно. При нажатии на фото книги происходит загрузка следующей страницы с описанием книги",
+                                    "data": "",
+                                    "steps": []
+                                },
+                                {
+                                    "position": 3,
+                                    "action": "Убедиться, что перешли на страницу с описанием книги",
+                                    "expected_result": "Страница с описание выбранной книги загрузилась и доступна для взаимодействия с пользователем",
+                                    "data": "",
+                                    "steps": []
+                                }
+                            ],
+                            "tags": [],
+                            "params": [],
+                            "is_muted": "no"
+                        }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "title": "Просмотр конкретной книги",
+                    "description": null,
+                    "preconditions": null,
+                    "suites": [
+                        {
+                            "id": 6,
+                            "title": "Таб \"Описание\"",
+                            "description": null,
+                            "preconditions": null,
+                            "suites": [],
+                            "cases": [
+                                {
+                                    "id": 15,
+                                    "title": "При отсутствии описания книги отображается текст \"Описание книги пока не доступно\"",
+                                    "description": null,
+                                    "preconditions": "Нужно открыть [портал ](https://books-library.herokuapp.com/)пользователя",
+                                    "postconditions": null,
+                                    "priority": "medium",
+                                    "severity": "normal",
+                                    "type": "usability",
+                                    "behavior": "positive",
+                                    "automation": "is-not-automated",
+                                    "status": "actual",
+                                    "is_flaky": "no",
+                                    "layer": "unknown",
+                                    "milestone": null,
+                                    "custom_fields": [],
+                                    "steps_type": "classic",
+                                    "steps": [
+                                        {
+                                            "position": 1,
+                                            "action": "Найти книгу без описания",
+                                            "expected_result": "Такая книга существует в списке книг и в табе \"Описание\" имеет сообщение «Описание книги пока не доступно»",
+                                            "data": "",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 2,
+                                            "action": "Перейти на страницу книги, у которой отсутствует описание.",
+                                            "expected_result": "Страница с выбранной книгой открывается успешно",
+                                            "data": "",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 3,
+                                            "action": "Убедиться, что на странице книги отображается текст \"Описание книги пока не доступно\".",
+                                            "expected_result": "На странице книги отображается текст \"Описание книги пока не доступно\".",
+                                            "data": "",
+                                            "steps": []
+                                        }
+                                    ],
+                                    "tags": [],
+                                    "params": [],
+                                    "is_muted": "no"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 7,
+                            "title": "Таб \"Отзывы\"",
+                            "description": null,
+                            "preconditions": null,
+                            "suites": [],
+                            "cases": [
+                                {
+                                    "id": 16,
+                                    "title": "Проверка отображения информации в отзыве",
+                                    "description": "Этот тест проверяет, что на странице отзыва корректно отображается следующая информация: \"[Имя] добавил(а) отзыв: [Текст отзыва]\"",
+                                    "preconditions": "Выполнить [шаги](https://app.qase.io/case/HW7-1) для перехода к конкретной книге",
+                                    "postconditions": null,
+                                    "priority": "low",
+                                    "severity": "normal",
+                                    "type": "functional",
+                                    "behavior": "positive",
+                                    "automation": "is-not-automated",
+                                    "status": "actual",
+                                    "is_flaky": "no",
+                                    "layer": "unknown",
+                                    "milestone": null,
+                                    "custom_fields": [],
+                                    "steps_type": "classic",
+                                    "steps": [
+                                        {
+                                            "position": 1,
+                                            "action": "Найти на странице книги таб \"Отзывы\", где отображается информация об авторе и тексте отзыва.",
+                                            "expected_result": "Таб \"Отзывы\" существует и отображается, если был текст описания.",
+                                            "data": "",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 2,
+                                            "action": "Проверить, что на странице присутствует информация об авторе отзыва и тексте отзыва.",
+                                            "expected_result": "Присутствует информация об авторе отзыва и тексте отзыва.",
+                                            "data": "",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 3,
+                                            "action": "Проверить, что информация отображается в формате: \"[Имя] добавил(а) отзыв: [Текст отзыва]\"",
+                                            "expected_result": "Информация отображается в формате: \"[Имя] добавил(а) отзыв: [Текст отзыва]\"",
+                                            "data": "",
+                                            "steps": []
+                                        }
+                                    ],
+                                    "tags": [],
+                                    "params": [],
+                                    "is_muted": "no"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 10,
+                            "title": "Блок \"Рейтинг\"",
+                            "description": null,
+                            "preconditions": null,
+                            "suites": [],
+                            "cases": [
+                                {
+                                    "id": 2,
+                                    "title": "Окрашивается выбранное кол-во звезд в блоке рейтинг при наведении.",
+                                    "description": null,
+                                    "preconditions": "Выполнить [шаги](https://app.qase.io/case/HW7-1) для перехода к конкретной книге",
+                                    "postconditions": null,
+                                    "priority": "high",
+                                    "severity": "major",
+                                    "type": "usability",
+                                    "behavior": "positive",
+                                    "automation": "is-not-automated",
+                                    "status": "actual",
+                                    "is_flaky": "no",
+                                    "layer": "unknown",
+                                    "milestone": null,
+                                    "custom_fields": [],
+                                    "steps_type": "classic",
+                                    "steps": [
+                                        {
+                                            "position": 1,
+                                            "action": "Перейти на вкладку \"Отзывы\"",
+                                            "expected_result": "Вкладка кликабельна и содержит поля для заполнения: имя, рейтинг и отзыв",
+                                            "data": "![Снимок экрана 2024-04-01 в 11.24.12.png](https://d2cxucsjd6xvsd.cloudfront.net/public/team/7f84a2a5017326397187ace439fd933b2f31712d/attachment/e66930193bfe068110348abe94ed4fdefb148169/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-04-01%20%D0%B2%2011.24.12.png)",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 2,
+                                            "action": "Найти блок \"Рейтинг\" и перейти к нему",
+                                            "expected_result": "Блок \"Рейтинг\" находится на странице с информацией о книге",
+                                            "data": "Найти иконки в виде 5 серых звездочек\n![Снимок экрана 2024-04-01 в 11.25.54.png](https://d2cxucsjd6xvsd.cloudfront.net/public/team/7f84a2a5017326397187ace439fd933b2f31712d/attachment/d9eccd99b3cc3fe3840c467d65251bcf8a547fa9/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-04-01%20%D0%B2%2011.25.54.png)",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 3,
+                                            "action": "Навести курсор на нужное количество звезд",
+                                            "expected_result": "При наведении курсора на звезды - они временно закрашиваются",
+                                            "data": "4 звезды\n![Снимок экрана 2024-04-01 в 11.26.11.png](https://d2cxucsjd6xvsd.cloudfront.net/public/team/7f84a2a5017326397187ace439fd933b2f31712d/attachment/7d316235aeb55d864812eb153969619fc233ef67/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-04-01%20%D0%B2%2011.26.11.png)",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 4,
+                                            "action": "Нажать на выбранное кол-во звезд мышью",
+                                            "expected_result": "При нажатии на выбранное кол-во звезд - они закрасились",
+                                            "data": "3 звезды\n![Снимок экрана 2024-04-01 в 11.26.48.png](https://d2cxucsjd6xvsd.cloudfront.net/public/team/7f84a2a5017326397187ace439fd933b2f31712d/attachment/0120fd625974ed03848350d7f74ba0024a5fc409/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-04-01%20%D0%B2%2011.26.48.png)",
+                                            "steps": []
+                                        }
+                                    ],
+                                    "tags": [],
+                                    "params": [],
+                                    "is_muted": "no"
+                                }
+                            ]
+                        }
+                    ],
+                    "cases": []
+                }
+            ],
+            "cases": [
+                {
+                    "id": 17,
+                    "title": "Максимальное количество пользователей, которые одновременно зайдут на эту страницу, — не более 100 человек",
+                    "description": "Тестирование производительности системы",
+                    "preconditions": "Должен быть открыт [портал ](https://books-library.herokuapp.com/)пользователя",
+                    "postconditions": null,
+                    "priority": "high",
+                    "severity": "blocker",
+                    "type": "performance",
+                    "behavior": "positive",
+                    "automation": "is-not-automated",
+                    "status": "actual",
+                    "is_flaky": "no",
+                    "layer": "unknown",
+                    "milestone": null,
+                    "custom_fields": [],
+                    "steps_type": "classic",
+                    "steps": [
+                        {
+                            "position": 1,
+                            "action": "Скачать с официального сайта JMeter",
+                            "expected_result": "JMeter скачан",
+                            "data": "[https://jmeter.apache.org/](https://jmeter.apache.org/)",
+                            "steps": []
+                        },
+                        {
+                            "position": 2,
+                            "action": "Распаковать JMeter при помощи архиватора",
+                            "expected_result": "JMeter распакован в папку",
+                            "data": "",
+                            "steps": []
+                        },
+                        {
+                            "position": 3,
+                            "action": "Перейти в папку распакованную папку и найти в ней папку bin",
+                            "expected_result": "Папка bin найдена и выполнен переход в директорию bin",
+                            "data": "",
+                            "steps": []
+                        },
+                        {
+                            "position": 4,
+                            "action": "В папке bin найти и запустить ApacheJMeter",
+                            "expected_result": "Исполняемый файл ApacheJMeter найден и запущен",
+                            "data": "На MacOS для запуска исполняемого файла нужно при клике на файл нужно удерживая клавишу Control, нажать на значок приложения, затем выбрать «Открыть» в контекстном меню.",
+                            "steps": []
+                        },
+                        {
+                            "position": 5,
+                            "action": "В открывшемся окне в левой части окна найти Test Plan",
+                            "expected_result": "Компонент Test Plan отображается в левом углу окна",
+                            "data": "![Снимок экрана 2024-03-31 в 13.02.02.png](https://d2cxucsjd6xvsd.cloudfront.net/public/team/7f84a2a5017326397187ace439fd933b2f31712d/attachment/80d84e10029d5f5f58de4e2b5536acd0275db882/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-03-31%20%D0%B2%2013.02.02.png)",
+                            "steps": []
+                        },
+                        {
+                            "position": 6,
+                            "action": "На Test Plan кликнуть правой кнопкой мыши и в выпадающем меню выбрать Add => Threads (Users) => Thread Group",
+                            "expected_result": "Компонент Thread Group отображается в левом углу окна",
+                            "data": "![Снимок экрана 2024-03-31 в 12.42.52.png](https://d2cxucsjd6xvsd.cloudfront.net/public/team/7f84a2a5017326397187ace439fd933b2f31712d/attachment/5f120b5d6f26d47726b239127a8c4471534d07e6/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-03-31%20%D0%B2%2012.42.52.png)",
+                            "steps": []
+                        },
+                        {
+                            "position": 7,
+                            "action": "В окне Thread Group выбрать кол-во человек для входа (number of threads)",
+                            "expected_result": "В окне Thread Group в поле Number of Threads указано максимальное кол-во пользователей",
+                            "data": "100\n![Снимок экрана 2024-03-31 в 12.58.34.png](https://d2cxucsjd6xvsd.cloudfront.net/public/team/7f84a2a5017326397187ace439fd933b2f31712d/attachment/9417a1769a87a54db44a010d1ca50862e9e5c330/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-03-31%20%D0%B2%2012.58.34.png)",
+                            "steps": []
+                        },
+                        {
+                            "position": 8,
+                            "action": "Вернуться к левому дереву и нажать на Thread Group правой кнопкой мыши и выбрать Sampler => HTTP Request",
+                            "expected_result": "Компонент HTTP Request добавлен и отображается в дереве компонентов",
+                            "data": "![Снимок экрана 2024-03-31 в 12.45.26.png](https://d2cxucsjd6xvsd.cloudfront.net/public/team/7f84a2a5017326397187ace439fd933b2f31712d/attachment/2dbe0d9a00012d51aad8fbef202d1f45e590cb8a/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-03-31%20%D0%B2%2012.45.26.png)",
+                            "steps": []
+                        },
+                        {
+                            "position": 9,
+                            "action": "В открывшемся окне HTTP Request заполнить поле Path",
+                            "expected_result": "В окне HTTP Request в поле Path указан адрес портала для тестирования",
+                            "data": "[https://books-library.herokuapp.com/](https://books-library.herokuapp.com/)\n![Снимок экрана 2024-03-31 в 13.09.09.png](https://d2cxucsjd6xvsd.cloudfront.net/public/team/7f84a2a5017326397187ace439fd933b2f31712d/attachment/3387eb2258546742b435f10076f4b2d77b1de183/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-03-31%20%D0%B2%2013.09.09.png)",
+                            "steps": []
+                        },
+                        {
+                            "position": 10,
+                            "action": "Вернуться к левому дереву и нажать на HTTP Request правой кнопкой мыши и выбрать Listener => View Results Tree",
+                            "expected_result": "Компонент View Results Tree добавлен и отображается в дереве компонентов",
+                            "data": "",
+                            "steps": []
+                        },
+                        {
+                            "position": 11,
+                            "action": "На верхней панели инструментов найти иконку Start - зеленый треугольник и нажать на него",
+                            "expected_result": "Запросы корректно и все иконки зеленого цвета, что является индикатором того, что время выполнения не превысило установленное ограничение.",
+                            "data": "![Снимок экрана 2024-03-31 в 13.13.13.png](https://d2cxucsjd6xvsd.cloudfront.net/public/team/7f84a2a5017326397187ace439fd933b2f31712d/attachment/4b217473b576924f407dd7242d19a8531906e7a3/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-03-31%20%D0%B2%2013.13.13.png)",
+                            "steps": []
+                        }
+                    ],
+                    "tags": [],
+                    "params": [],
+                    "is_muted": "no"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Портал администратора",
+            "description": null,
+            "preconditions": null,
+            "suites": [
+                {
+                    "id": 8,
+                    "title": "Создание книги",
+                    "description": null,
+                    "preconditions": null,
+                    "suites": [
+                        {
+                            "id": 11,
+                            "title": "Описание книги",
+                            "description": null,
+                            "preconditions": null,
+                            "suites": [],
+                            "cases": [
+                                {
+                                    "id": 4,
+                                    "title": "Ввод кириллицы, латиницы, точек, запятых, восклицательные знаков, тире и пробелов",
+                                    "description": null,
+                                    "preconditions": "Открыть [портал ](https://books-library.herokuapp.com/admin)администратора",
+                                    "postconditions": null,
+                                    "priority": "high",
+                                    "severity": "critical",
+                                    "type": "functional",
+                                    "behavior": "undefined",
+                                    "automation": "is-not-automated",
+                                    "status": "actual",
+                                    "is_flaky": "no",
+                                    "layer": "unknown",
+                                    "milestone": null,
+                                    "custom_fields": [],
+                                    "steps_type": "classic",
+                                    "steps": [
+                                        {
+                                            "position": 1,
+                                            "action": "Выполнить [шаги](https://app.qase.io/case/HW7-6) по добавлению книги",
+                                            "expected_result": "Открыта страница с пустыми полями для заполнения",
+                                            "data": "![Снимок экрана 2024-04-02 в 18.22.40.png](https://d2cxucsjd6xvsd.cloudfront.net/public/team/7f84a2a5017326397187ace439fd933b2f31712d/attachment/3693ca00e3c822c23f9c4ee30b86c64b9ec3d194/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-04-02%20%D0%B2%2018.22.40.png)",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 2,
+                                            "action": "Добавить название",
+                                            "expected_result": "Название корректно и принимается системой",
+                                            "data": "Мастер и Маргарита",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 3,
+                                            "action": "Добавить ссылку на книгу",
+                                            "expected_result": "Ссылка на книгу соответствует требованиям системы и принимается системой",
+                                            "data": "[https://drive.google.com/file/d/1T24CSqZTvVf_JqZUGQzPNU0zIiIxYen-/view](https://drive.google.com/file/d/1T24CSqZTvVf_JqZUGQzPNU0zIiIxYen-/view)\n![Снимок экрана 2024-04-02 в 18.20.47.png](https://d2cxucsjd6xvsd.cloudfront.net/public/team/7f84a2a5017326397187ace439fd933b2f31712d/attachment/90851db404cdbeb91de103067712bc1e13cb69c0/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-04-02%20%D0%B2%2018.20.47.png)",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 4,
+                                            "action": "Найти поле \"Описание\"",
+                                            "expected_result": "Поле \"Описание\" существует и находится на странице создания книги",
+                                            "data": "![Снимок экрана 2024-04-02 в 18.28.02.png](https://d2cxucsjd6xvsd.cloudfront.net/public/team/7f84a2a5017326397187ace439fd933b2f31712d/attachment/1024711ca8866da9096d0d41c1da5f83d673c7cf/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-04-02%20%D0%B2%2018.28.02.png)",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 5,
+                                            "action": "Начать ввод текста в поле \"Описание\" используя только символы кириллицы и/или латиницы, а также точки, запятые, восклицательные знаки, тире и пробелы.",
+                                            "expected_result": "Поле ввода принимает указанные символы и специальные знаки пунктуации",
+                                            "data": "Дьявол приходит в Москву! Говорит сатира, любовь, волшебство. Следите за черным котом! Булгаков шедевр!",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 6,
+                                            "action": "Нажать на кнопку \"Добавить\"",
+                                            "expected_result": "При вводе кириллицы, латиницы, точек, запятых, восклицательные знаков, тире и пробелов система реагирует без ошибок",
+                                            "data": "![Снимок экрана 2024-04-02 в 18.28.42.png](https://d2cxucsjd6xvsd.cloudfront.net/public/team/7f84a2a5017326397187ace439fd933b2f31712d/attachment/c9022803e658b674734cac2d01e10864c4a260e8/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-04-02%20%D0%B2%2018.28.42.png)",
+                                            "steps": []
+                                        }
+                                    ],
+                                    "tags": [],
+                                    "params": [],
+                                    "is_muted": "no"
+                                },
+                                {
+                                    "id": 5,
+                                    "title": "Максимальное кол-во символов - 1000",
+                                    "description": null,
+                                    "preconditions": "Открыть [портал ](https://books-library.herokuapp.com/admin)администратора",
+                                    "postconditions": null,
+                                    "priority": "high",
+                                    "severity": "major",
+                                    "type": "functional",
+                                    "behavior": "positive",
+                                    "automation": "is-not-automated",
+                                    "status": "actual",
+                                    "is_flaky": "no",
+                                    "layer": "unknown",
+                                    "milestone": null,
+                                    "custom_fields": [],
+                                    "steps_type": "classic",
+                                    "steps": [
+                                        {
+                                            "position": 1,
+                                            "action": "Выполнить [шаги](https://app.qase.io/case/HW7-6) по добавлению книги",
+                                            "expected_result": "Открыта страница с пустыми полями для заполнения",
+                                            "data": "",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 2,
+                                            "action": "Добавить название",
+                                            "expected_result": "Название корректно и принимается системой",
+                                            "data": "Море",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 3,
+                                            "action": "Добавить ссылку на книгу",
+                                            "expected_result": "Ссылка на книгу соответствует требованиям системы и принимается системой",
+                                            "data": "[https://drive.google.com/file/d/1T24CSqZTvVf_JqZUGQzPNU0zIiIxYen-/view](https://drive.google.com/file/d/1T24CSqZTvVf_JqZUGQzPNU0zIiIxYen-/view)",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 4,
+                                            "action": "Найти поле \"Описание\"",
+                                            "expected_result": "Поле \"Описание\" существует и находится на странице создания книги",
+                                            "data": "",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 5,
+                                            "action": "Ввести описание в пределах 1000 символов",
+                                            "expected_result": "Поле \"Описание\" принимает максимально допустимое кол-во символов - 1000",
+                                            "data": "Безусловно, синтетическое тестирование в значительной степени обусловливает важность инновационных методов управления процессами. Мы вынуждены отталкиваться от того, что перспективное планирование играет важную роль в формировании стандартных подходов. Учитывая ключевые сценарии поведения, понимание сути ресурсосберегающих технологий создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса кластеризации усилий. Господа, постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно определяет каждого участника как способного принимать собственные решения касаемо прогресса профессионального сообщества. Банальные, но неопровержимые выводы, а также стремящиеся вытеснить традиционное производство, нанотехнологии, инициированные исключительно синтетически, объединены в целые кластеры себе подобных. Вот вам яркий пример современных тенденций — курс на социально-ориентированный национальный проект обеспечивает актуальность вывода текущих активов.",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 6,
+                                            "action": "Нажать на кнопку \"Добавить\"",
+                                            "expected_result": "При заполнении других обязательных полей и при добавлении 1000 символов система реагирует без ошибок",
+                                            "data": "",
+                                            "steps": []
+                                        }
+                                    ],
+                                    "tags": [],
+                                    "params": [],
+                                    "is_muted": "no"
+                                },
+                                {
+                                    "id": 21,
+                                    "title": "Не допускаются смайлики, так как это небезопасно.",
+                                    "description": null,
+                                    "preconditions": "Открыть [портал ](https://books-library.herokuapp.com/admin)администратора",
+                                    "postconditions": null,
+                                    "priority": "high",
+                                    "severity": "critical",
+                                    "type": "security",
+                                    "behavior": "negative",
+                                    "automation": "is-not-automated",
+                                    "status": "actual",
+                                    "is_flaky": "no",
+                                    "layer": "unknown",
+                                    "milestone": null,
+                                    "custom_fields": [],
+                                    "steps_type": "classic",
+                                    "steps": [
+                                        {
+                                            "position": 1,
+                                            "action": "Выполнить [шаги](https://app.qase.io/case/HW7-6) по добавлению книги",
+                                            "expected_result": "Открыта страница с пустыми полями для заполнения",
+                                            "data": "",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 2,
+                                            "action": "Добавить название",
+                                            "expected_result": "Название корректно и принимается системой",
+                                            "data": "Море",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 3,
+                                            "action": "Добавить ссылку на книгу",
+                                            "expected_result": "Ссылка на книгу соответствует требованиям системы и принимается системой",
+                                            "data": "[https://drive.google.com/file/d/1T24CSqZTvVf_JqZUGQzPNU0zIiIxYen-/view](https://drive.google.com/file/d/1T24CSqZTvVf_JqZUGQzPNU0zIiIxYen-/view)",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 4,
+                                            "action": "Найти поле \"Описание\"",
+                                            "expected_result": "Поле \"Описание\" существует и находится на странице создания книги",
+                                            "data": "",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 5,
+                                            "action": "Начать смайликов и emoji",
+                                            "expected_result": "Поле заполнено",
+                                            "data": "🤡✂︎☛␁🤖",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 6,
+                                            "action": "Нажать на кнопку \"Добавить\"",
+                                            "expected_result": "Поле ввода не принимает смайлики и emoji и на их ввод реагирует ошибкой",
+                                            "data": "",
+                                            "steps": []
+                                        }
+                                    ],
+                                    "tags": [],
+                                    "params": [],
+                                    "is_muted": "no"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 12,
+                            "title": "Обложка книги",
+                            "description": null,
+                            "preconditions": null,
+                            "suites": [],
+                            "cases": [
+                                {
+                                    "id": 7,
+                                    "title": "Загрузка изображений формата jpg и png",
+                                    "description": null,
+                                    "preconditions": "Открыть [портал ](https://books-library.herokuapp.com/admin)администратора",
+                                    "postconditions": null,
+                                    "priority": "medium",
+                                    "severity": "major",
+                                    "type": "functional",
+                                    "behavior": "positive",
+                                    "automation": "is-not-automated",
+                                    "status": "actual",
+                                    "is_flaky": "no",
+                                    "layer": "unknown",
+                                    "milestone": null,
+                                    "custom_fields": [],
+                                    "steps_type": "classic",
+                                    "steps": [
+                                        {
+                                            "position": 1,
+                                            "action": "Выполнить [шаги](https://app.qase.io/case/HW7-6) по добавлению книги",
+                                            "expected_result": "Открыта страница с пустыми полями для заполнения",
+                                            "data": "",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 2,
+                                            "action": "Добавить название",
+                                            "expected_result": "Название корректно и принимается системой",
+                                            "data": "Море",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 3,
+                                            "action": "Добавить ссылку на книгу",
+                                            "expected_result": "Ссылка на книгу соответствует требованиям системы и принимается системой",
+                                            "data": "[https://drive.google.com/file/d/1T24CSqZTvVf_JqZUGQzPNU0zIiIxYen-/view](https://drive.google.com/file/d/1T24CSqZTvVf_JqZUGQzPNU0zIiIxYen-/view)",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 4,
+                                            "action": "Выбрать любое изображение в формате jpg или png для обложки книги",
+                                            "expected_result": "Изображение соответствует допустимому формату jpg или png",
+                                            "data": "Дефолтная [картинка](https://drive.google.com/file/d/1-lm5Gckfv1H6TXJ0MhPwoHavCr1WBjIA/view?usp=sharing) с книгой в формате png",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 5,
+                                            "action": "Загрузить выбранное изображение в качестве обложки",
+                                            "expected_result": "Выбранный формат принимается системой для загрузки",
+                                            "data": "",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 6,
+                                            "action": "Дождаться завершения загрузки",
+                                            "expected_result": "Загрузка изображения прошла успешно",
+                                            "data": "",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 7,
+                                            "action": "Заполнить поле \"Описание\"",
+                                            "expected_result": "Поле \"Описание\" существует и находится на странице создания книги",
+                                            "data": "",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 8,
+                                            "action": "Нажать на кнопку \"Добавить\"",
+                                            "expected_result": "Обложка загружена корректно и соответствует требованиям системы",
+                                            "data": "",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 9,
+                                            "action": "Просмотреть страницу книги и убедиться, что загруженная обложка корректно и правильно отображается",
+                                            "expected_result": "Обложка корректно отображается на странице книги",
+                                            "data": "",
+                                            "steps": []
+                                        }
+                                    ],
+                                    "tags": [],
+                                    "params": [],
+                                    "is_muted": "no"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 14,
+                            "title": "Кнопка \"Добавить\"",
+                            "description": null,
+                            "preconditions": null,
+                            "suites": [],
+                            "cases": [
+                                {
+                                    "id": 8,
+                                    "title": "Кнопка \"Добавить\" автоматически перенаправляет на страницу со списком книг",
+                                    "description": null,
+                                    "preconditions": "Открыть [портал ](https://books-library.herokuapp.com/admin)администратора",
+                                    "postconditions": null,
+                                    "priority": "high",
+                                    "severity": "blocker",
+                                    "type": "functional",
+                                    "behavior": "positive",
+                                    "automation": "is-not-automated",
+                                    "status": "actual",
+                                    "is_flaky": "no",
+                                    "layer": "unknown",
+                                    "milestone": null,
+                                    "custom_fields": [],
+                                    "steps_type": "classic",
+                                    "steps": [
+                                        {
+                                            "position": 1,
+                                            "action": "Выполнить [шаги](https://app.qase.io/case/HW7-6) по добавлению книги",
+                                            "expected_result": "Открыта страница с пустыми полями для заполнения",
+                                            "data": "",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 2,
+                                            "action": "Добавить название",
+                                            "expected_result": "Название корректно и принимается системой",
+                                            "data": "Мастер и Маргарита",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 3,
+                                            "action": "Добавить ссылку на книгу",
+                                            "expected_result": "Ссылка на книгу соответствует требованиям системы и принимается системой",
+                                            "data": "[https://drive.google.com/file/d/1T24CSqZTvVf_JqZUGQzPNU0zIiIxYen-/view](https://drive.google.com/file/d/1T24CSqZTvVf_JqZUGQzPNU0zIiIxYen-/view)",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 4,
+                                            "action": "Заполнить поле \"Описание\"",
+                                            "expected_result": "Поле \"Описание\" существует и находится на странице создания книги",
+                                            "data": "Дьявол приходит в Москву! Говорит сатира, любовь, волшебство. Следите за черным котом! Булгаков шедевр!",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 5,
+                                            "action": "Нажать на кнопку \"Добавить\"",
+                                            "expected_result": "После нажатия на кнопку добавить система автоматически перенаправляет пользователя на страницу со списком книг",
+                                            "data": "",
+                                            "steps": []
+                                        }
+                                    ],
+                                    "tags": [],
+                                    "params": [],
+                                    "is_muted": "no"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 15,
+                            "title": "Ссылка на книгу",
+                            "description": null,
+                            "preconditions": null,
+                            "suites": [],
+                            "cases": [
+                                {
+                                    "id": 9,
+                                    "title": "Вставляется ссылка вида: https://",
+                                    "description": null,
+                                    "preconditions": "Открыть [портал ](https://books-library.herokuapp.com/admin)администратора",
+                                    "postconditions": null,
+                                    "priority": "high",
+                                    "severity": "major",
+                                    "type": "functional",
+                                    "behavior": "positive",
+                                    "automation": "is-not-automated",
+                                    "status": "actual",
+                                    "is_flaky": "no",
+                                    "layer": "unknown",
+                                    "milestone": null,
+                                    "custom_fields": [],
+                                    "steps_type": "classic",
+                                    "steps": [
+                                        {
+                                            "position": 1,
+                                            "action": "Выполнить шаги по [добавлению](https://app.qase.io/case/HW7-6) книги",
+                                            "expected_result": "Открыта страница с добавлением информации о книге",
+                                            "data": "![Снимок экрана 2024-04-02 в 18.22.40.png](https://d2cxucsjd6xvsd.cloudfront.net/public/team/7f84a2a5017326397187ace439fd933b2f31712d/attachment/fce21b00856b3b715dfa4f137c44938d4d8528a4/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-04-02%20%D0%B2%2018.22.40.png)",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 2,
+                                            "action": "Заполнить поле \"Название\"",
+                                            "expected_result": "Поле \"Название\" заполнено корректно",
+                                            "data": "Мастер и Маргарита\n![Снимок экрана 2024-04-02 в 18.25.14.png](https://d2cxucsjd6xvsd.cloudfront.net/public/team/7f84a2a5017326397187ace439fd933b2f31712d/attachment/993d59c217d5736a03824826c86f6f7451e8617b/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-04-02%20%D0%B2%2018.25.14.png)",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 3,
+                                            "action": "В указанное поле вставить ссылку в формате https://",
+                                            "expected_result": "Поле заполнено",
+                                            "data": "[https://drive.google.com/file/d/1T24CSqZTvVf_JqZUGQzPNU0zIiIxYen-/view](https://drive.google.com/file/d/1T24CSqZTvVf_JqZUGQzPNU0zIiIxYen-/view)\n![Снимок экрана 2024-04-02 в 18.20.47.png](https://d2cxucsjd6xvsd.cloudfront.net/public/team/7f84a2a5017326397187ace439fd933b2f31712d/attachment/f2b9536eef8484610635d6eb41a34fb358123587/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-04-02%20%D0%B2%2018.20.47.png)",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 4,
+                                            "action": "Добавить информацию в поле \"Описание\"",
+                                            "expected_result": "Поле ввода принимает указанные символы и специальные знаки пунктуации",
+                                            "data": "Дьявол приходит в Москву! Говорит сатира, любовь, волшебство. Следите за черным котом! Булгаков шедевр!",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 5,
+                                            "action": "Нажать на кнопку \"Добавить\"",
+                                            "expected_result": "Формат ссылки соответствует требованиям системы и принимается системой без ошибок",
+                                            "data": "",
+                                            "steps": []
+                                        }
+                                    ],
+                                    "tags": [],
+                                    "params": [],
+                                    "is_muted": "no"
+                                },
+                                {
+                                    "id": 14,
+                                    "title": "Ссылка не соответствует допустимому виду ссылок",
+                                    "description": null,
+                                    "preconditions": "Открыть [портал ](https://books-library.herokuapp.com/admin)администратора",
+                                    "postconditions": null,
+                                    "priority": "high",
+                                    "severity": "critical",
+                                    "type": "functional",
+                                    "behavior": "negative",
+                                    "automation": "is-not-automated",
+                                    "status": "actual",
+                                    "is_flaky": "no",
+                                    "layer": "unknown",
+                                    "milestone": null,
+                                    "custom_fields": [],
+                                    "steps_type": "classic",
+                                    "steps": [
+                                        {
+                                            "position": 1,
+                                            "action": "Выполнить шаги по [добавлению](https://app.qase.io/case/HW7-6) книги",
+                                            "expected_result": "Открыта страница с добавлением информации о книге",
+                                            "data": "![Снимок экрана 2024-04-02 в 18.22.40.png](https://d2cxucsjd6xvsd.cloudfront.net/public/team/7f84a2a5017326397187ace439fd933b2f31712d/attachment/c71108ec88c42ab963687b047dafd73af4cfed94/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-04-02%20%D0%B2%2018.22.40.png)",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 2,
+                                            "action": "Заполнить поле \"Название\"",
+                                            "expected_result": "Поле \"Название\" заполнено корректно",
+                                            "data": "Мастер и Маргарита\n![Снимок экрана 2024-04-02 в 18.25.14.png](https://d2cxucsjd6xvsd.cloudfront.net/public/team/7f84a2a5017326397187ace439fd933b2f31712d/attachment/9f8ae8ca9856708ae4e95b1e092794ba1e7142c0/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-04-02%20%D0%B2%2018.25.14.png)",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 3,
+                                            "action": "В указанное поле вставить ссылку, которая НЕ соответствует формату https://",
+                                            "expected_result": "Поле заполнено",
+                                            "data": "[www.drive.google.com/file/d/1T24CSqZTvVf_JqZUGQzPNU](https://drive.google.com/file/d/1T24CSqZTvVf_JqZUGQzPNU)\n![Снимок экрана 2024-04-02 в 18.32.05.png](https://d2cxucsjd6xvsd.cloudfront.net/public/team/7f84a2a5017326397187ace439fd933b2f31712d/attachment/40e2088399bb426146c8ca99a2651e43a07ac49c/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-04-02%20%D0%B2%2018.32.05.png)",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 4,
+                                            "action": "Ввести описание книги в поле \"Описание\"",
+                                            "expected_result": "Поле ввода принимает указанные символы и специальные знаки пунктуации",
+                                            "data": "Дьявол приходит в Москву! Говорит сатира, любовь, волшебство. Следите за черным котом! Булгаков шедевр!",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 5,
+                                            "action": "Нажать на кнопку \"Добавить\"",
+                                            "expected_result": "Система реагирует ошибкой: «Введите корректную ссылку на книгу»",
+                                            "data": "",
+                                            "steps": []
+                                        }
+                                    ],
+                                    "tags": [],
+                                    "params": [],
+                                    "is_muted": "no"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 16,
+                            "title": "Название книги",
+                            "description": null,
+                            "preconditions": null,
+                            "suites": [],
+                            "cases": [
+                                {
+                                    "id": 11,
+                                    "title": "Пустое поле \"Название книги\"",
+                                    "description": null,
+                                    "preconditions": "Открыть [портал ](https://books-library.herokuapp.com/admin)администратора",
+                                    "postconditions": null,
+                                    "priority": "medium",
+                                    "severity": "major",
+                                    "type": "functional",
+                                    "behavior": "negative",
+                                    "automation": "is-not-automated",
+                                    "status": "actual",
+                                    "is_flaky": "no",
+                                    "layer": "unknown",
+                                    "milestone": null,
+                                    "custom_fields": [],
+                                    "steps_type": "classic",
+                                    "steps": [
+                                        {
+                                            "position": 1,
+                                            "action": "Выполнить [шаги](https://app.qase.io/case/HW7-1) для добавления книги",
+                                            "expected_result": "Открыта форма сайта для добавления информации о новой книге",
+                                            "data": "",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 2,
+                                            "action": "Оставить поле ввода \"Название\" пустым",
+                                            "expected_result": "Поле пустое",
+                                            "data": "",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 3,
+                                            "action": "Добавить ссылку на книгу",
+                                            "expected_result": "Ссылка на книгу соответствует требованиям системы и принимается системой",
+                                            "data": "[https://drive.google.com/file/d/1T24CSqZTvVf_JqZUGQzPNU0zIiIxYen-/view](https://drive.google.com/file/d/1T24CSqZTvVf_JqZUGQzPNU0zIiIxYen-/view)\n![Снимок экрана 2024-04-02 в 18.20.47.png](https://d2cxucsjd6xvsd.cloudfront.net/public/team/7f84a2a5017326397187ace439fd933b2f31712d/attachment/90851db404cdbeb91de103067712bc1e13cb69c0/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-04-02%20%D0%B2%2018.20.47.png)",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 4,
+                                            "action": "Добавить описание в поле \"Описание\"",
+                                            "expected_result": "Поле ввода принимает указанные допустимые символы и специальные знаки пунктуации",
+                                            "data": "Дьявол приходит в Москву! Говорит сатира, любовь, волшебство. Следите за черным котом! Булгаков шедевр!",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 5,
+                                            "action": "Нажать на кнопку \"Добавить\"",
+                                            "expected_result": "Система реагирует ошибкой «Введите название книги» на пустое поле",
+                                            "data": "",
+                                            "steps": []
+                                        }
+                                    ],
+                                    "tags": [],
+                                    "params": [],
+                                    "is_muted": "no"
+                                },
+                                {
+                                    "id": 12,
+                                    "title": "Ввод максимального кол-ва символов  — 256.",
+                                    "description": null,
+                                    "preconditions": "Выполнить [шаги](https://app.qase.io/case/HW7-6) по добавлению книги",
+                                    "postconditions": null,
+                                    "priority": "medium",
+                                    "severity": "major",
+                                    "type": "functional",
+                                    "behavior": "positive",
+                                    "automation": "is-not-automated",
+                                    "status": "actual",
+                                    "is_flaky": "no",
+                                    "layer": "unknown",
+                                    "milestone": null,
+                                    "custom_fields": [],
+                                    "steps_type": "classic",
+                                    "steps": [
+                                        {
+                                            "position": 1,
+                                            "action": "В поле \"Название\" ввести максимальной допустимое количество символов - 256",
+                                            "expected_result": "Поле заполнено",
+                                            "data": "Сложно сказать, почему базовые сценарии поведения пользователей описаны максимально подробно. Также как базовый вектор развития требует от нас анализа вывода текущих активов. В своём стремлении улучшить пользовательский опыт мы упускаем, что многие известн",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 2,
+                                            "action": "Заполнить поле \"Ссылка\"",
+                                            "expected_result": "Ссылка указана корректно и принимается системой",
+                                            "data": "[https://drive.google.com/file/d/1T24CSqZTvVf_JqZUGQzPNU0zIiIxYen-/view](https://drive.google.com/file/d/1T24CSqZTvVf_JqZUGQzPNU0zIiIxYen-/view)",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 3,
+                                            "action": "Заполнить поле \"Описание\"",
+                                            "expected_result": "Описание заполнено корректно и принимается системой",
+                                            "data": "Дьявол приходит в Москву! Говорит сатира, любовь, волшебство. Следите за черным котом! Булгаков шедевр!",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 4,
+                                            "action": "Нажать на кнопку \"Добавить\"",
+                                            "expected_result": "Поле \"Название\" принимает максимальное количество символов - 256",
+                                            "data": "",
+                                            "steps": []
+                                        }
+                                    ],
+                                    "tags": [],
+                                    "params": [],
+                                    "is_muted": "no"
+                                },
+                                {
+                                    "id": 13,
+                                    "title": "Ввод кириллицы, латиницы, использование точек, запятых, восклицательные знаков, тире и пробелов",
+                                    "description": null,
+                                    "preconditions": "Выполнить [шаги](https://app.qase.io/case/HW7-6) по добавлению книги",
+                                    "postconditions": null,
+                                    "priority": "high",
+                                    "severity": "major",
+                                    "type": "functional",
+                                    "behavior": "positive",
+                                    "automation": "is-not-automated",
+                                    "status": "actual",
+                                    "is_flaky": "no",
+                                    "layer": "unknown",
+                                    "milestone": null,
+                                    "custom_fields": [],
+                                    "steps_type": "classic",
+                                    "steps": [
+                                        {
+                                            "position": 1,
+                                            "action": "Выполнить [шаги](https://app.qase.io/case/HW7-6) по добавлению книги",
+                                            "expected_result": "Открыта страница с пустыми полями для заполнения",
+                                            "data": "",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 2,
+                                            "action": "Найти поле \"Название\"",
+                                            "expected_result": "Поле \"Название\" находится на странице создания книги",
+                                            "data": "",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 3,
+                                            "action": "Начать ввод текста в поле \"Название\" используя только символы кириллицы и/или латиницы, а также точки, запятые, восклицательные знаки, тире и пробелы.",
+                                            "expected_result": "Поле заполнено",
+                                            "data": "Преступление и наказание! Достоевский великий роман. Раскольников, Соня, преступление, кровь, раскаяние.",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 4,
+                                            "action": "Добавить ссылку на книгу",
+                                            "expected_result": "Ссылка на книгу соответствует требованиям системы и принимается системой",
+                                            "data": "[https://drive.google.com/file/d/1T24CSqZTvVf_JqZUGQzPNU0zIiIxYen-/view](https://drive.google.com/file/d/1T24CSqZTvVf_JqZUGQzPNU0zIiIxYen-/view)",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 5,
+                                            "action": "Добавить информацию в поле \"Описание\"",
+                                            "expected_result": "",
+                                            "data": "Роман о молодом студенте, который совершает убийство и сталкивается с его последствиями.",
+                                            "steps": []
+                                        },
+                                        {
+                                            "position": 6,
+                                            "action": "Нажать на кнопку \"Добавить\"",
+                                            "expected_result": "Поле ввода принимает указанные символы и специальные знаки пунктуации",
+                                            "data": "",
+                                            "steps": []
+                                        }
+                                    ],
+                                    "tags": [],
+                                    "params": [],
+                                    "is_muted": "no"
+                                }
+                            ]
+                        }
+                    ],
+                    "cases": []
+                },
+                {
+                    "id": 9,
+                    "title": "Удаление книги",
+                    "description": null,
+                    "preconditions": null,
+                    "suites": [],
+                    "cases": [
+                        {
+                            "id": 10,
+                            "title": "Удаление книги из списка книг при нажатии на кнопку \"Удалить\"",
+                            "description": null,
+                            "preconditions": "Перейти на [портал ](https://books-library.herokuapp.com/admin)администратора",
+                            "postconditions": null,
+                            "priority": "high",
+                            "severity": "critical",
+                            "type": "functional",
+                            "behavior": "undefined",
+                            "automation": "is-not-automated",
+                            "status": "actual",
+                            "is_flaky": "no",
+                            "layer": "unknown",
+                            "milestone": null,
+                            "custom_fields": [],
+                            "steps_type": "classic",
+                            "steps": [
+                                {
+                                    "position": 1,
+                                    "action": "Убедиться, что на портале есть хотя бы одна книга",
+                                    "expected_result": "На главной странице портала администратора как миниму одна книга в списке книг",
+                                    "data": "",
+                                    "steps": []
+                                },
+                                {
+                                    "position": 2,
+                                    "action": "Выбрать любую книгу из списка",
+                                    "expected_result": "Выбрана книга, имеющаяся на главной странице списка книг",
+                                    "data": "",
+                                    "steps": []
+                                },
+                                {
+                                    "position": 3,
+                                    "action": "Найти кнопку \"Удалить\"",
+                                    "expected_result": "Кнопка \"Удалить\" существует и находится в зоне видимости возле выбранной книги",
+                                    "data": "",
+                                    "steps": []
+                                },
+                                {
+                                    "position": 4,
+                                    "action": "Нажать на кнопку \"Удалить\"",
+                                    "expected_result": "При нажатии на кнопку выбранная книга удаляется из списка книг",
+                                    "data": "",
+                                    "steps": []
+                                }
+                            ],
+                            "tags": [],
+                            "params": [],
+                            "is_muted": "no"
+                        }
+                    ]
+                }
+            ],
+            "cases": [
+                {
+                    "id": 6,
+                    "title": "Открывается страница с добавлением книги",
+                    "description": null,
+                    "preconditions": "Открыть [портал ](https://books-library.herokuapp.com/admin)администратора",
+                    "postconditions": null,
+                    "priority": "high",
+                    "severity": "blocker",
+                    "type": "functional",
+                    "behavior": "positive",
+                    "automation": "is-not-automated",
+                    "status": "actual",
+                    "is_flaky": "no",
+                    "layer": "unknown",
+                    "milestone": null,
+                    "custom_fields": [],
+                    "steps_type": "classic",
+                    "steps": [
+                        {
+                            "position": 1,
+                            "action": "Найти кнопку \"Добавить книгу\"",
+                            "expected_result": "Кнопка \"Добавить книгу\" существует и находится на странице администратора",
+                            "data": "",
+                            "steps": []
+                        },
+                        {
+                            "position": 2,
+                            "action": "Нажать на кнопку \"Добавить книгу\"",
+                            "expected_result": "При нажатии на кнопку «Добавить книгу» открывается страница с добавлением книги.",
+                            "data": "",
+                            "steps": []
+                        },
+                        {
+                            "position": 3,
+                            "action": "Убедиться, что открылась страница с добавлением книги",
+                            "expected_result": "Открылась страница с добавлением книги.",
+                            "data": "здесь должна быть ссылка на страницу c добавлением книги",
+                            "steps": []
+                        }
+                    ],
+                    "tags": [],
+                    "params": [],
+                    "is_muted": "no"
+                },
+                {
+                    "id": 18,
+                    "title": "Возможность добавления и удаления книг",
+                    "description": null,
+                    "preconditions": "Открыть [портал ](https://books-library.herokuapp.com/admin)администратора",
+                    "postconditions": null,
+                    "priority": "high",
+                    "severity": "critical",
+                    "type": "functional",
+                    "behavior": "positive",
+                    "automation": "is-not-automated",
+                    "status": "actual",
+                    "is_flaky": "no",
+                    "layer": "unknown",
+                    "milestone": null,
+                    "custom_fields": [],
+                    "steps_type": "classic",
+                    "steps": [
+                        {
+                            "position": 1,
+                            "action": "На главной странице найти кнопку \"Добавить\"",
+                            "expected_result": "Кнопка \"Добавить\" существует и находится на главной странице портала администратора",
+                            "data": "",
+                            "steps": []
+                        },
+                        {
+                            "position": 2,
+                            "action": "На главной странице найти кнопку \"Удалить\" возле любой книги",
+                            "expected_result": "Кнопка \"Удалить\" существует и находится у каждой книги",
+                            "data": "",
+                            "steps": []
+                        }
+                    ],
+                    "tags": [],
+                    "params": [],
+                    "is_muted": "no"
+                },
+                {
+                    "id": 19,
+                    "title": "Скорость загрузки страницы портала администратора должна быть не более 3 секунд.",
+                    "description": null,
+                    "preconditions": "Открыть [портал ](https://books-library.herokuapp.com/admin)администратора",
+                    "postconditions": null,
+                    "priority": "high",
+                    "severity": "blocker",
+                    "type": "performance",
+                    "behavior": "positive",
+                    "automation": "is-not-automated",
+                    "status": "actual",
+                    "is_flaky": "no",
+                    "layer": "unknown",
+                    "milestone": null,
+                    "custom_fields": [],
+                    "steps_type": "classic",
+                    "steps": [
+                        {
+                            "position": 1,
+                            "action": "Скачать с официального сайта JMeter",
+                            "expected_result": "JMeter скачан",
+                            "data": "[https://jmeter.apache.org/](https://jmeter.apache.org/)",
+                            "steps": []
+                        },
+                        {
+                            "position": 2,
+                            "action": "Распаковать JMeter при помощи архиватора",
+                            "expected_result": "JMeter распакован в папку",
+                            "data": "",
+                            "steps": []
+                        },
+                        {
+                            "position": 3,
+                            "action": "Перейти в папку распакованную папку и найти в ней папку bin",
+                            "expected_result": "Папка bin найдена и выполнен переход в директорию bin",
+                            "data": "",
+                            "steps": []
+                        },
+                        {
+                            "position": 4,
+                            "action": "В папке bin найти и запустить ApacheJMeter",
+                            "expected_result": "Исполняемый файл ApacheJMeter найден и запущен",
+                            "data": "На MacOS для запуска исполняемого файла нужно при клике на файл удерживать клавишу control",
+                            "steps": []
+                        },
+                        {
+                            "position": 5,
+                            "action": "В открывшемся окне в левой части окна найти Test Plan",
+                            "expected_result": "Компонент Test Plan отображается в левом углу окна",
+                            "data": "![Снимок экрана 2024-03-31 в 13.02.02.png](https://d2cxucsjd6xvsd.cloudfront.net/public/team/7f84a2a5017326397187ace439fd933b2f31712d/attachment/c150934fe6ad1c84578d20058ec4348825ad6ce5/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-03-31%20%D0%B2%2013.02.02.png)",
+                            "steps": []
+                        },
+                        {
+                            "position": 6,
+                            "action": "На Test Plan кликнуть правой кнопкой мыши и в выпадающем меню выбрать Add => Threads (Users) => Thread Group",
+                            "expected_result": "Компонент Thread Group отображается в левом углу окна",
+                            "data": "![Снимок экрана 2024-03-31 в 12.42.52.png](https://d2cxucsjd6xvsd.cloudfront.net/public/team/7f84a2a5017326397187ace439fd933b2f31712d/attachment/5f2e3d57bf56e6cd32991badb10402286b7608a1/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-03-31%20%D0%B2%2012.42.52.png)",
+                            "steps": []
+                        },
+                        {
+                            "position": 7,
+                            "action": "В окне Thread Group выбрать кол-во человек для входа (number of threads)",
+                            "expected_result": "В окне Thread Group в поле Number of Threads указано максимальное кол-во пользователей",
+                            "data": "10 пользователей\n![Снимок экрана 2024-03-31 в 12.43.33.png](https://d2cxucsjd6xvsd.cloudfront.net/public/team/7f84a2a5017326397187ace439fd933b2f31712d/attachment/f52e2c8d106a85ee778f21e13fdf78e6e47a28a5/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-03-31%20%D0%B2%2012.43.33.png)",
+                            "steps": []
+                        },
+                        {
+                            "position": 8,
+                            "action": "Вернуться к левому дереву и нажать на Thread Group правой кнопкой мыши и выбрать в меню Sampler => HTTP Request",
+                            "expected_result": "Компонент HTTP Request добавлен и отображается в дереве компонентов",
+                            "data": "![Снимок экрана 2024-03-31 в 12.44.59.png](https://d2cxucsjd6xvsd.cloudfront.net/public/team/7f84a2a5017326397187ace439fd933b2f31712d/attachment/33acdf9fc4bbac9e25637320d19396bb06b71b10/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-03-31%20%D0%B2%2012.44.59.png)",
+                            "steps": []
+                        },
+                        {
+                            "position": 9,
+                            "action": "В открывшемся окне HTTP Request заполнить поле Path",
+                            "expected_result": "В окне HTTP Request в поле Path указан адрес портала для тестирования",
+                            "data": "[https://books-library.herokuapp.com/admin/addBook](https://books-library.herokuapp.com/admin/addBook)\n![Снимок экрана 2024-03-31 в 12.45.26.png](https://d2cxucsjd6xvsd.cloudfront.net/public/team/7f84a2a5017326397187ace439fd933b2f31712d/attachment/2dbe0d9a00012d51aad8fbef202d1f45e590cb8a/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-03-31%20%D0%B2%2012.45.26.png)",
+                            "steps": []
+                        },
+                        {
+                            "position": 10,
+                            "action": "Вернуться к левому дереву и нажать на HTTP Request правой кнопкой мыши и выбрать Listener => Duration Assertion",
+                            "expected_result": "Компонент Duration Assertion добавлен и отображается в дереве компонентов",
+                            "data": "![Снимок экрана 2024-03-31 в 12.46.57.png](https://d2cxucsjd6xvsd.cloudfront.net/public/team/7f84a2a5017326397187ace439fd933b2f31712d/attachment/a75b2e3010f38e94d12aad3fc8312ef1fe21fdff/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-03-31%20%D0%B2%2012.46.57.png)",
+                            "steps": []
+                        },
+                        {
+                            "position": 11,
+                            "action": "В окне Duration Assertion в поле Duration in milliseconds установить максимальное время ожидания (в миллисекундах => N сек \\* 1000)",
+                            "expected_result": "В окне Duration Assertion в поле Duration in milliseconds указано максимальное время ожидания в миллисекундах",
+                            "data": "3000",
+                            "steps": []
+                        },
+                        {
+                            "position": 12,
+                            "action": "Вернуться к левому дереву и нажать на HTTP Request правой кнопкой мыши и выбрать Listener => View Results Tree",
+                            "expected_result": "Компонент View Results Tree добавлен и отображается в дереве компонентов",
+                            "data": "",
+                            "steps": []
+                        },
+                        {
+                            "position": 13,
+                            "action": "На верхней панели инструментов найти иконку Start - зеленый треугольник и нажать на него",
+                            "expected_result": "Запросы корректно и все иконки зеленого цвета, что является индикатором того, что время выполнения не превысило установленное ограничение.",
+                            "data": "![Снимок экрана 2024-03-31 в 12.56.05.png](https://d2cxucsjd6xvsd.cloudfront.net/public/team/7f84a2a5017326397187ace439fd933b2f31712d/attachment/860ffe435571b18037aa8a0e93cdc876cb78a2e5/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-03-31%20%D0%B2%2012.56.05.png)",
+                            "steps": []
+                        }
+                    ],
+                    "tags": [],
+                    "params": [],
+                    "is_muted": "no"
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "title": "Smoke",
+            "description": null,
+            "preconditions": null,
+            "suites": [],
+            "cases": [
+                {
+                    "id": 24,
+                    "title": "Поиск книги по названию",
+                    "description": "Убедиться, что функция поиска на главной странице работает правильно",
+                    "preconditions": "Открыть главную [страницу](https://books-library-2.herokuapp.com/) библиотеки.",
+                    "postconditions": null,
+                    "priority": "high",
+                    "severity": "critical",
+                    "type": "smoke",
+                    "behavior": "positive",
+                    "automation": "is-not-automated",
+                    "status": "actual",
+                    "is_flaky": "no",
+                    "layer": "unknown",
+                    "milestone": null,
+                    "custom_fields": [],
+                    "steps_type": "classic",
+                    "steps": [
+                        {
+                            "position": 1,
+                            "action": "Найти поле поиска.",
+                            "expected_result": "Поле поиска находится на всех страницах в шапке окна",
+                            "data": "",
+                            "steps": []
+                        },
+                        {
+                            "position": 2,
+                            "action": "Ввести название книги в поле поиска.",
+                            "expected_result": "Ввод принят",
+                            "data": "Мастер",
+                            "steps": []
+                        },
+                        {
+                            "position": 3,
+                            "action": "Нажать клавишу Enter",
+                            "expected_result": "Ввод подтвержден",
+                            "data": "",
+                            "steps": []
+                        },
+                        {
+                            "position": 4,
+                            "action": "Проверить, что система выдает результаты поиска соответствующие введенному запросу.",
+                            "expected_result": "Система выдает релевантные запросу результаты поиска",
+                            "data": "",
+                            "steps": []
+                        }
+                    ],
+                    "tags": [],
+                    "params": [],
+                    "is_muted": "no"
+                }
+            ]
+        }
+    ]
+}
